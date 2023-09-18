@@ -10,7 +10,7 @@ Welcome to the Visitor Count API repository! This project is a Java Spring Boot 
 
 ## Description
 
-Java-based application built using the Spring Boot framework. The Visitor Count API allows users to manage visitor counts and related information through a set of RESTful endpoints. It includes features such as adding new visitors, retrieving visitor counts, updating counts, and more.
+Java-based application built using the Spring Boot framework. The Visitor Count API allows users to manage visitor counts and related information through a set of RESTful endpoints. It includes features such as adding new visitors, retrieving visitor counts, and more.
 
 ## Endpoints
 
@@ -26,7 +26,7 @@ Java-based application built using the Spring Boot framework. The Visitor Count 
 - **Endpoint**: `/api/v1/username/{username}/count`
 - **Description**: Retrieves the hit count for a specific user identified by `{username}`.
 
-### Add a New Visitor
+### Increase Total Count
 
 - **HTTP Method**: POST
 - **Endpoint**: `api/v1/visitor-count-app`
@@ -37,7 +37,7 @@ Java-based application built using the Spring Boot framework. The Visitor Count 
 
 - **HTTP Method**: POST
 - **Endpoint**: `/api/v1/count_update/username/{username}/count`
-- **Description**: Increments the hit count for a specific user identified by `{username}`.
+- **Description**: Increments the hit count for a specific user identified by `{username}` also if user doesn't exist it create the user with given username and assign count 1.
 
 ## Project Structure
 
@@ -48,6 +48,8 @@ The project is organized into several parts:
 2. **Controllers**: Defines the API endpoints and maps them to service methods.
 
 3. **Services**: Implements the business logic for the API endpoints.
+
+4. **Repository**: Implements the database(HashMap) and data Manegement logic 
 
 ## Getting Started
 
